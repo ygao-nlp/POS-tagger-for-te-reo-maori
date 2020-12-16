@@ -1,12 +1,8 @@
 # Part-of-Speech Tagging for Te Reo Māori
----
 
 This project uses three methods, CRF, BiLSTM and BiLSTM-CRF, to achieve lexical annotation of Maori. Three datasets were used, TRM, extended TRM and UDPOS from PyTorch, where TRM and extended TRM were the manually labelled datasets. Ultimately, the results of the experiments were evaluated by accuracy.
 
----
-
 ## Environment
----
 
 ### Hardware
 * GeForce GTX 1080
@@ -22,7 +18,6 @@ You have to install these packages before executing this code.
 *	sklearn_crfsuite == 0.3
 
 ## Usage
----
 
 Prepare Data
 All data is stored in three .txt files, where maori-tag-string(part).txt is TRM, maori-tag-string.txt is extended TRM and maori-tag-string-noisy.txt is the noisy data part of extended TRM
@@ -34,7 +29,6 @@ For the UDPOS dataset, which is derived from torchtext [1], it provides many bui
 All the code and functions for preprocessing data are in maori_data.py
 
 ## Building Models
----
 
 The model and the code associated with it are placed in model.py. There are four models, including random forest, CRF, BiLSTM, and BiLSTM-CRF. Random forest and CRF are from the sklearn library [2], and the formatted data can be used directly. BiLSTM-CRF is based on pytorch tutorial [3] and has been partially modified.
 Result
