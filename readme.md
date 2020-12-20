@@ -46,6 +46,7 @@ For BiLSTM-CRF, we have replaced the fully connected layer with a CRF layer. Oth
 Models are trained and evaluated in four other files, each file corresponding to one of the following experiments. The current results are obtained from the model through 50 iterations, and we believe that a higher number of iterations will lead to better results.
 
 Based on the results we assumed that data with noisy (i.e. incorrect words with the same usage) has a negative effect on the CRF. To test this assumption, we trained models with noisy part of extended TRM and then tested them with TRM. In this experiment, it was clear that the results of CRF-based taggers were much worse than the BiLSTM model, which means that the CRF model does not handle noisy data well. 
+
 Overall, all results of our taggers outperform the random forest. For the CRF, it usually requires many more iterations to complete converge. This is probably the main factor that affects the performance of CRF and BiLSTM-CRF. However, more iterations mean longer training time and we were not able to keep the BiLSTM-CRF trained on the extended TRM and UDPOS datasets until the best results were achieved. Based on our results, BiLSTM-CRF is more suitable for small size datasets, and BiLSTM-based tagger provides faster speeds when working with large size datasets.
 
 
